@@ -1,13 +1,13 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
-import Header from './Constants/Navbar'
-import Footer from './Constants/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
 import Home from './Pages/Home'
 import ProjectCaseStudy from './Pages/PastProjects'
-import { useEffect } from 'react'
 import { ContactUs } from './Pages/ContactUs'
 import { AboutUs } from './Pages/AboutUs'
 import BlogPage from './Pages/Blogs'
 import BlogPostPage from './Pages/BlogPost'
+import Header from './Components/Navbar'
+import Footer from './Components/Footer'
 
 function App() {
   return (
@@ -23,10 +23,6 @@ function App() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/blogs" element={<BlogPage />} />
             <Route path="/blog" element={<BlogPostPage />} />
-            {/* <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/blogs" element={<Blogs />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} /> */}
           </Routes>
         </main>
         <Footer />

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import useNavigateWithScroll from "../CustomHooks/customHooks";
 
 const projects = [
   {
@@ -195,21 +196,21 @@ const projects = [
 ];
 
 const PastProjects = () => {
-  const navigate = useNavigate();
+  const navigateWithScroll = useNavigateWithScroll();
   return (
-    <section className="py-10 bg-gradient-to-b from-blue-100 to-green-100 p-4">
+    <section id="PastProject" className="py-10 bg-gradient-to-b from-blue-100 to-green-100 p-4">
       <h2 className="text-center text-2xl font-bold text-blue-600">
         Past Projects
       </h2>
-      <div className="max-w-3xl mx-auto mt-6 flex flex-col gap-10">
+      <div className="max-w-4xl mx-auto mt-6 flex flex-col gap-10">
         {/* First Project with Full Background Image */}
-        {projects.map((project, index) => (
+        {projects.slice(0,3).map((project, index) => (
           <div
             onClick={() => {
-              navigate("/projects", { state: { project } });
+              navigateWithScroll("/projects", { project });
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="relative rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 hover:cursor-pointer"
+            className="max-h-[50vh] relative rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 hover:cursor-pointer"
           >
             <img
               src={project.featureImage}

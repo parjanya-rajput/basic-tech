@@ -1,2 +1,8 @@
 
 @import "tailwindcss";
+a,button{
+    cursor: pointer;
+}
+a:hover{
+    color: green;
+}

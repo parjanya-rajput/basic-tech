@@ -1,33 +1,31 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+// import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { BlogPageSlides } from "../../Constants/BlogData";
 
-const footerSlides = [
-  {
-    title: "Lorem Ipsum Is Sim",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry's standard since the 1500s.",
-  },
-  {
-    title: "Boost Your Business with AI",
-    description:
-      "Embrace the power of AI and technology to stay ahead in the competitive market.",
-  },
-];
+
 
 const BlogsSlider = () => {
   return (
     <section className="text-center py-16 px-6 md:px-20 bg-gradient-to-t from-white to-blue-100">
-      <Swiper navigation={true} modules={[Navigation]} className="w-full max-w-5xl mx-auto">
-        {footerSlides.map((slide, index) => (
+      <Swiper
+        navigation={true}
+        modules={[Navigation]}
+        className="w-full max-w-5xl mx-auto"
+      >
+        {BlogPageSlides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="p-4">
-              <h2 className="text-2xl md:text-3xl font-bold text-blue-600">{slide.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-blue-600">
+                {slide.title}
+              </h2>
               <p className="text-gray-600 mt-4">{slide.description}</p>
               <p className="text-blue-600 font-semibold mt-4">Lorem Ipsum Is</p>
-              <p className="text-blue-500">It Is A Long Established Fact That A Read</p>
+              <p className="text-blue-500">
+                It Is A Long Established Fact That A Read
+              </p>
             </div>
           </SwiperSlide>
         ))}

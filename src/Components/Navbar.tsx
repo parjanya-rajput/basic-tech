@@ -1,10 +1,10 @@
-import React, { use, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import useNavigateWithScroll from "../CustomHooks/customHooks";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("");
-  const navigate = useNavigate();
+  const navigateWithScroll = useNavigateWithScroll();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -22,7 +22,7 @@ const Header = () => {
         <div className="flex items-center">
           <h1
             className="text-3xl font-bold text-green-500 hover:cursor-pointer"
-            onClick={() => navigate("/")}
+            onClick={() => navigateWithScroll("/")}
           >
             BT
           </h1>
@@ -35,7 +35,7 @@ const Header = () => {
               key={link.href}
               href={link.href}
               onClick={() => {
-                navigate(link.href);
+                navigateWithScroll(link.href);
                 setActiveTab(link.href);
               }}
               className={`${

@@ -1,46 +1,10 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import useNavigateWithScroll from "../../CustomHooks/customHooks";
+import { blogs } from "../../Constants/BlogData";
 
-const blogs = [
-  {
-    title: "Mastering Web Development",
-    content:
-      "Discover the latest trends and best practices in modern web development.",
-    image: "https://picsum.photos/300/200?random=1",
-  },
-  {
-    title: "The Rise of AI in Everyday Life",
-    content:
-      "How artificial intelligence is transforming industries and daily experiences.",
-    image: "https://picsum.photos/300/200?random=2",
-  },
-  {
-    title: "Blockchain Beyond Cryptocurrency",
-    content:
-      "Exploring the potential applications of blockchain technology across various sectors.",
-    image: "https://picsum.photos/300/200?random=3",
-  },
-  {
-    title: "Cybersecurity in the Digital Age",
-    content:
-      "Why protecting personal and business data is more crucial than ever.",
-    image: "https://picsum.photos/300/200?random=4",
-  },
-  {
-    title: "Cloud Computing: Future of Data Storage",
-    content:
-      "How cloud computing is reshaping data accessibility and security.",
-    image: "https://picsum.photos/300/200?random=5",
-  },
-  {
-    title: "UX/UI Design Trends for 2025",
-    content:
-      "A deep dive into the future of user experience and interface design.",
-    image: "https://picsum.photos/300/200?random=6",
-  },
-];
-const BlogCard = ({ title, content, image }) => {
-  const navigate = useNavigate();
+
+const BlogCard = ({blog}) => {
+  const {title, description, image }=blog
+  const navigateWithScroll = useNavigateWithScroll();
   return (
     <div className="bg-white rounded-lg shadow-lg p-4">
       <img
@@ -50,9 +14,9 @@ const BlogCard = ({ title, content, image }) => {
       />
       <div className="p-4">
         <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="text-gray-600 mt-2">{content}</p>
+        <p className="text-gray-600 mt-2">{description}</p>
         <button
-          onClick={() => navigate("/blog")}
+          onClick={() => navigateWithScroll("/blog",{blog:blog})}
           className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700"
         >
           Read the Post
@@ -70,7 +34,7 @@ const BlogGrid = () => {
       </h2>
       <div className="grid md:grid-cols-3 gap-8">
         {blogs.map((blog, index) => (
-          <BlogCard key={index} {...blog} />
+          <BlogCard key={index} blog={blog} />
         ))}
       </div>
     </section>

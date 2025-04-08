@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import BlogsSlider from "../Components/BlogComp/BlogsSlider";
 import BlogGrid from "../Components/BlogComp/RecentBlogs";
 import { Contactus } from "../Components/Contactus";
@@ -7,7 +8,7 @@ import ProcessWeFollow from "../Components/ProcessWeFollow";
 const BlogPostPage = () => {
   return (
     <>
-      <BlogContent blog={undefined} />
+      <BlogContent />
       <BlogGrid />
       <BlogsSlider />
       <ProcessWeFollow />
@@ -17,12 +18,13 @@ const BlogPostPage = () => {
   );
 };
 
-const BlogContent = ({ blog }) => {
+const BlogContent = () => {
+
   // Default blogData object
   const defaultBlog = {
     title:
       "Dive Into Expert Insights, Industry Trends, And Actionable Strategies.",
-    headerImage: "https://picsum.photos/800/400?random=1", // Random header image
+    image: "https://picsum.photos/800/400?random=1", // Random header image
     sections: [
       {
         subtitle: "Elevate your Digital Presence",
@@ -42,8 +44,11 @@ const BlogContent = ({ blog }) => {
       },
     ],
   };
-
-  const blogData = blog || defaultBlog;
+  const location = useLocation();
+  const data = location.state;
+  console.log(location)
+  const blog = data?.blog
+  const blogData = blog ?? defaultBlog;
 
   return (
     <div className="max-w-5xl mx-auto p-6 md:p-12">
@@ -56,7 +61,7 @@ const BlogContent = ({ blog }) => {
       <div className="relative mb-8">
         <h2 className="text-2xl font-bold text-blue-600 mb-4">Blog</h2>
         <img
-          src={blogData.headerImage}
+          src={blogData.image}
           alt="Blog Header"
           className="w-full rounded-lg shadow-lg"
         />
