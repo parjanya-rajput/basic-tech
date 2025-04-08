@@ -1,10 +1,10 @@
-import { Contactus } from '../Components/Contactus'
-import { Faq } from '../Components/faq'
+import { Contactus } from "../Components/Contactus";
+import { Faq } from "../Components/faq";
 
 export const ContactUs = () => {
   return (
-<section className="py-16 relative overflow-hidden">
-<div
+    <section className="py-16 relative overflow-hidden">
+      <div
         className="absolute top-1/6 rounded-full blur-3xl inset-0 h-100 w-100 bg-gradient-to-br from-blue-50 via-purple-50 to-blue-100 opacity-50 z-0"
         style={{
           background:
@@ -32,8 +32,8 @@ export const ContactUs = () => {
             "radial-gradient(circle at top right, yellow, rgba(240, 249, 255, 0.4))",
         }}
       ></div>
-    <Contactus/>
-    <Faq/>
+      <Contactus />
+      <Faq />
     </section>
-  )
-}
+  );
+};
