@@ -4,32 +4,42 @@ export const Faq = () => {
   const FaqItems = [
     {
       id: 1,
-      question: "What services does BasicTech offer?",
-      answer: "BasicTech offers a comprehensive range of digital services including web development, mobile app development, UI/UX design, digital marketing, and IT consulting. We specialize in creating custom solutions tailored to your business needs."
+      question: "How fast Can I expect a 5-6 pager website ready from design to production?",
+      answer: "A week is more than enough for us"
     },
     {
       id: 2,
-      question: "How long does it typically take to complete a project?",
-      answer: "Project timelines vary depending on complexity and scope. A simple website might take 4-6 weeks, while a complex web application could take 3-6 months. We'll provide a detailed timeline during our initial consultation."
+      question: "Do we provide extensive Maintainance and real time support?",
+      answer: "Yes we provide extensive backend support and that too real time for our higher valued clients"
     },
     {
       id: 3,
-      question: "What is your development process?",
-      answer: "Our development process follows an agile methodology with five key phases: Discovery, Planning, Development, Testing, and Deployment. We maintain continuous communication and provide regular updates throughout the project lifecycle."
+      question: "I have tight deadline commitment, for building my applications?",
+      answer: "We have extensive team, we don't mind putting in more workforce to meet overwhelming deadlines"
     },
     {
       id: 4,
-      question: "Do you provide ongoing support after project completion?",
-      answer: "Yes, we offer comprehensive post-launch support and maintenance packages. This includes regular updates, security patches, performance monitoring, and technical support to ensure your digital solution continues to perform optimally."
+      question: "How we will be different from our competitor?",
+      answer: "All of our engineers 10x engineers and they will be leveraging AI to deliver the same quality cheaply to you , so you will be getting better product faster and cheaper than anywhere else"
     },
     {
       id: 5,
-      question: "What technologies do you specialize in?",
-      answer: "We specialize in modern web technologies including React, Node.js, TypeScript, Next.js, and various cloud platforms. Our tech stack is constantly evolving to incorporate the latest and most efficient solutions for our clients."
+      question: "Can you help me scope out my project?",
+      answer: "Absolutely. We often start with a free consultation to understand your vision, define requirements, and suggest a tech roadmap. We’re happy to help even if you’re still at the idea stage."
+    },
+    {
+      id: 6,
+      question: "How does pricing work?",
+      answer: "We offer flexible pricing models based on your needs: Fixed-price for well-defined projects \n Monthly retainers for ongoing work \n Hourly rates for short-term consulting \n We’ll work with you to find a model that fits your budget and goals."
+    },
+    {
+      id: 7,
+      question: "Do you work with early-stage startups?",
+      answer: "Yes! We love working with early-stage startups—especially those who need to go from idea to MVP quickly without compromising on engineering quality"
     }
-];
+  ];
   return (
-<div className="max-w-6xl mx-auto px-4 py-16">
+    <div className="max-w-6xl mx-auto px-4 py-16">
       <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">
         Frequently Asked Questions
       </h2>

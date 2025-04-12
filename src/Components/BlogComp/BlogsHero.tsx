@@ -31,7 +31,7 @@ const HeroSection = () => {
                 </h2>
                 <p className="text-gray-600 mt-4">{slide.description}</p>
                 <button
-                  onClick={() => navigateWithScroll("/blog",{blog:slide})}
+                  onClick={() => navigateWithScroll("/blog", { blog: slide })}
                   className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700"
                 >
                   Read More
@@ -41,7 +41,7 @@ const HeroSection = () => {
                 <img
                   src={slide.image}
                   alt={slide.title}
-                  className="rounded-lg shadow-md"
+                  className="w-150 h-80 rounded-lg shadow-md"
                 />
               </div>
             </div>

@@ -204,7 +204,7 @@ const PastProjects = () => {
       </h2>
       <div className="max-w-4xl mx-auto mt-6 flex flex-col gap-10">
         {/* First Project with Full Background Image */}
-        {projects.slice(0,3).map((project, index) => (
+        {projects.slice(0, 3).map((project, index) => (
           <div
             onClick={() => {
               navigateWithScroll("/projects", { project });

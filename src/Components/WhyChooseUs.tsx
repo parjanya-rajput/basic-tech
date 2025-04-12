@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
           <line x1="15" y1="9" x2="15.01" y2="9" />
         </svg>
       ),
-      title: "30+ Projects Done",
+      title: "10+ Projects Done",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     },
