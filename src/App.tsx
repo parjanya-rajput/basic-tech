@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import Home from './Pages/Home'
 import ProjectCaseStudy from './Pages/PastProjects'
@@ -12,23 +13,21 @@ import Footer from './Components/Footer'
 function App() {
   return (
     <BrowserRouter>
-      <Router>
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-grow">
-            <Routes>
-              Add your routes here
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<ProjectCaseStudy />} />
-              <Route path="/contact" element={<ContactUs />} />
-              <Route path="/about" element={<AboutUs />} />
-              <Route path="/blogs" element={<BlogPage />} />
-              <Route path="/blog" element={<BlogPostPage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow">
+          <Routes>
+            Add your routes here
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<ProjectCaseStudy />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/blogs" element={<BlogPage />} />
+            <Route path="/blog" element={<BlogPostPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </BrowserRouter>
   )
 }
