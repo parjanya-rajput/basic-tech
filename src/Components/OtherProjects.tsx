@@ -19,7 +19,7 @@ const ProductCard = ({ project }) => {
   return (
     <div className="bg-white/80 shadow-lg rounded-xl  flex flex-col gap-4 hover:shadow-xl transition-all z-10">
       <img
-        src={project.featureImage}
+        src={project.logo}
         alt={project.projectName}
         className="w-full h-40 object-cover rounded-lg"
       />

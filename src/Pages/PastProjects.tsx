@@ -58,8 +58,8 @@ export const ClientInfoSection = ({ clientInfo }: { clientInfo: { label: string;
   <div className={`grid grid-cols-2 md:grid-cols-5 gap-3 mb-10 border-b-2 border-white/60 rounded-lg ${glassEffect}`}>
     {clientInfo.map((item, index) => (
       <div key={index} className="p-4 text-center">
-        <div className="text-blue-600 font-bold text-sm mb-1">{item.label}</div>
-        <div className="text-gray-700 text-sm">{item.value}</div>
+        <div className="text-blue-600 font-bold text-sm mb-1 font-agrandir-heavy">{item.label}</div>
+        <div className="text-gray-700 text-sm font-agrandir">{item.value}</div>
       </div>
     ))}
   </div>
@@ -68,9 +68,9 @@ export const ClientInfoSection = ({ clientInfo }: { clientInfo: { label: string;
 // Business Requirement Section Component
 export const BusinessRequirementSection = ({ businessRequirement }: { businessRequirement: string }) => (
   <div className="mb-12">
-    <h3 className="text-2xl text-blue-600 font-bold text-center mb-4">Business Requirement</h3>
+    <h3 className="text-2xl text-blue-600 font-bold text-center mb-4 font-neue">Business Requirement</h3>
     <div className={`p-6 rounded-xl ${glassEffect}`}>
-      <p className="text-gray-700 leading-relaxed">{businessRequirement}</p>
+      <p className="text-gray-700 leading-relaxed font-agrandir">{businessRequirement}</p>
     </div>
   </div>
 );
@@ -80,10 +80,10 @@ export const FeaturesSection = ({ features, featureImage }: { features: string[]
   <div className="mb-12">
     <div className={`p-6 rounded-xl ${glassEffect} grid grid-cols-1 md:grid-cols-3 gap-6`}>
       <div>
-        <h3 className="text-2xl text-blue-600 font-bold mb-4">Features</h3>
+        <h3 className="text-2xl text-blue-600 font-bold mb-4 font-agrandir-heavy">Features</h3>
         <div className="space-y-2 mb-6">
           {features.map((feature, index) => (
-            <div key={index} className="text-gray-700">• {feature}</div>
+            <div key={index} className="text-gray-700 font-agrandir">• {feature}</div>
           ))}
         </div>
       </div>
@@ -98,11 +98,15 @@ export const FeaturesSection = ({ features, featureImage }: { features: string[]
 export const ChallengeSection = ({ challenge }: { challenge: string }) => (
   <div className="mb-12">
     <div className={`p-6 rounded-xl ${glassEffect}`}>
-      <h3 className="text-2xl text-blue-600 font-bold text-center mb-4">The Challenge</h3>
+      <h3 className="text-2xl text-blue-600 font-bold text-center mb-4 font-agrandir-heavy">The Challenge</h3>
       <div className="flex flex-col md:flex-row gap-6 items-center">
         <img src={challengeImage} alt="Challenge Icon" className="w-60 h-60" />
         <div className="w-full md:w-3/5">
-          <p className="text-gray-700 leading-relaxed mb-4">{challenge}</p>
+          {challenge.split('|').map((paragraph, index) => (
+            <p key={index} className="text-gray-700 leading-relaxed mb-4 font-agrandir">
+              {paragraph.trim()}
+            </p>
+          ))}
         </div>
       </div>
     </div>
@@ -110,14 +114,18 @@ export const ChallengeSection = ({ challenge }: { challenge: string }) => (
 );
 
 // Design Section Component
-export const DesignSection = ({ design }: { design: string }) => (
+export const DesignSection = ({ design, designImage }: { design: string; designImage: string }) => (
   <div className="mb-12">
     <div className={`p-6 rounded-xl ${glassEffect}`}>
-      <h3 className="text-2xl text-blue-600 font-bold text-center mb-4">The Design</h3>
+      <h3 className="text-2xl text-blue-600 font-bold text-center mb-4 font-agrandir-heavy">The Design</h3>
       <div className="flex flex-col md:flex-row-reverse gap-6 items-center">
         <img src={designImage} alt="Design Icon" className="w-60 h-60 object-cover" />
         <div className="w-full md:w-3/5 mr-auto">
-          <p className="text-gray-700 leading-relaxed mb-4">{design}</p>
+          {design.split('|').map((paragraph, index) => (
+            <p key={index} className="text-gray-700 leading-relaxed mb-4 font-agrandir">
+              {paragraph.trim()}
+            </p>
+          ))}
         </div>
       </div>
     </div>
@@ -125,17 +133,17 @@ export const DesignSection = ({ design }: { design: string }) => (
 );
 
 // Solution Section Component
-export const SolutionSection = ({ solution, solutionPoints }: { solution: string; solutionPoints: string[] }) => (
+export const SolutionSection = ({ solution, solutionPoints, solutionImage }: { solution: string; solutionPoints: string[]; solutionImage: string }) => (
   <div className="mb-12">
     <div className={`p-6 rounded-xl ${glassEffect}`}>
-      <h3 className="text-2xl text-blue-600 font-bold text-center mb-4">The Solution</h3>
+      <h3 className="text-2xl text-blue-600 font-bold text-center mb-4 font-agrandir-heavy">The Solution</h3>
       <div className="flex flex-col md:flex-row gap-6 items-center">
         <img src={solutionImage} alt="Solution Icon" className="w-60 h-60 object-cover" />
         <div className="w-full md:w-3/5">
-          <p className="text-gray-700 leading-relaxed mb-4">{solution}</p>
+          <p className="text-gray-700 leading-relaxed mb-4 font-agrandir">{solution}</p>
           <div className="space-y-2">
             {solutionPoints.map((point, index) => (
-              <div key={index} className="text-gray-700">• {point}</div>
+              <div key={index} className="text-gray-700 font-agrandir">• {point}</div>
             ))}
           </div>
         </div>
@@ -193,8 +201,8 @@ const ProjectCaseStudy = () => {
         <BusinessRequirementSection businessRequirement={data.businessRequirement} />
         <FeaturesSection features={data.features} featureImage={data.featureImage} />
         <ChallengeSection challenge={data.challenge} />
-        <DesignSection design={data.design} />
-        <SolutionSection solution={data.solution} solutionPoints={data.solutionPoints} />
+        <DesignSection design={data.design} designImage={data.designImage} />
+        <SolutionSection solution={data.solution} solutionPoints={data.solutionPoints} solutionImage={data.solutionImage} />
         <TechStackPage />
         <ProcessWeFollow />
         <OtherProjects />
