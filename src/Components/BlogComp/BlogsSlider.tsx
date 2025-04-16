@@ -18,12 +18,12 @@ const BlogsSlider = () => {
         {BlogPageSlides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="p-4">
-              <h2 className="text-2xl md:text-3xl font-bold text-blue-600">
+              <h2 className="text-2xl md:text-3xl text-blue-600 font-neue">
                 {slide.title}
               </h2>
-              <p className="text-gray-600 mt-4">{slide.description}</p>
-              <p className="text-blue-600 font-semibold mt-4">Lorem Ipsum Is</p>
-              <p className="text-blue-500">
+              <p className="text-gray-600 mt-4 font-ibm italic">{slide.description}</p>
+              <p className="text-blue-600 font-semibold mt-4 font-ibm">Lorem Ipsum Is</p>
+              <p className="text-blue-500 font-ibm">
                 It Is A Long Established Fact That A Read
               </p>
             </div>

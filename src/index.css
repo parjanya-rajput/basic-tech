@@ -1,8 +1,43 @@
+@font-face {
+    font-family: Neue;
+    src: url(../src/assets/fonts/NeueMachina-Ultrabold.otf);
+}
+
+@font-face {
+    font-family: Segoe;
+    src: url(../src/assets/fonts/SegoeUI.ttf);
+}
+
+@font-face {
+    font-family: Agrandir;
+    src: url(../src/assets/fonts/Agrandir-Regular.otf);
+}
+
+@font-face {
+    font-family: Agrandir-Heavy;
+    src: url(../src/assets/fonts/Agrandir-GrandHeavy.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @import "tailwindcss";
-a,button{
+
+a,
+button {
     cursor: pointer;
 }
-a:hover{
+
+a:hover {
     color: green;
+}
+
+@theme {
+    --font-neue: Neue, "sans-serif";
+    --font-segoe: Segoe, "sans-serif";
+    --font-inter: Inter, "sans-serif";
+    --font-ibm: IBM Plex Sans, "sans-serif";
+    --font-agrandir: Agrandir, "sans-serif";
+    --font-agrandir-heavy: Agrandir-Heavy, "sans-serif";
 }

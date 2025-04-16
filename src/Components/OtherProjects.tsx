@@ -4,7 +4,7 @@ import useNavigateWithScroll from "../CustomHooks/customHooks";
 const OtherProjects = () => {
   return (
     <div className="max-w-5xl mx-auto">
-      <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">
+      <h2 className="text-2xl font-bold text-center text-blue-600 mb-6 font-neue">
         Other Projects
       </h2>
 
@@ -25,14 +25,14 @@ const ProductCard = ({ project }) => {
       />
       <div className="flex flex-row gap-2 items-center justify-between px-5 py-1">
         <div className="flex-2">
-          <p className="text-gray-800 text-sm font-semibold">
+          <p className="text-gray-800 text-sm font-semibold font-agrandir-heavy">
             {project.projectName}
           </p>
-          <p className="text-gray-500 text-sm">{project.subtitle}</p>
+          <p className="text-gray-500 text-sm font-agrandir font-bold">{project.subtitle}</p>
         </div>
         <button
           onClick={() => {
-            navigateWithScroll(`/projects`, {  project: project });
+            navigateWithScroll(`/projects`, { project: project });
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
           className="bg-green-500 text-white text-sm py-2 px-4 rounded-2xl self-start hover:bg-green-600 flex-1"

@@ -134,7 +134,7 @@ const BlogContent = () => {
           {text.split("|").map((item, index) => (
             <li key={index} className="flex items-start">
               {item.trim() && (
-                <span className="text-gray-700 leading-relaxed">
+                <span className="text-gray-700 leading-relaxed font-segoe">
                   {item.trim()}
                 </span>
               )}
@@ -149,13 +149,12 @@ const BlogContent = () => {
   return (
     <div className="max-w-5xl mx-auto p-6 md:p-12">
       {/* Hero Section */}
-      <h1 className="text-2xl md:text-4xl font-bold text-center text-blue-600 mb-8 leading-snug">
+      <h1 className="font-neue text-2xl md:text-4xl font-bold text-center text-blue-600 mb-8 leading-snug">
         {blogData.title}
       </h1>
 
       {/* Blog Header Section */}
       <div className="relative mb-8">
-        <h2 className="text-2xl font-bold text-blue-600 mb-4">Blog</h2>
         <div className="w-full h-120 overflow-hidden rounded-lg shadow-lg">
           <img
             src={blogData.image}
@@ -169,7 +168,7 @@ const BlogContent = () => {
       {blogData.sections.map((section, index) => (
         <div key={index} className="mb-16">
           {/* Subtitle */}
-          <h2 className="text-xl font-bold text-blue-600 mb-6">
+          <h2 className="text-xl font-bold text-blue-600 mb-6 font-neue">
             {section.subtitle}
           </h2>
 

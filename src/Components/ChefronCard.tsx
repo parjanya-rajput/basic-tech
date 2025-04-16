@@ -19,16 +19,14 @@ export const ChefronCardText = ({ text, icon, index }) => {
       className={`relative flex flex-col justify-center h-60 max-w-60 lg:min-h-100 rounded-lg  transition-transform transform hover:scale-105`}
     >
       <h2
-        className={`lg:absolute ${
-          index % 2 == 0 ? "lg:top-0" : "lg:bottom-0"
-        } left-1/2 lg:-translate-x-1/2 z-1 text-center`}
+        className={`lg:absolute font-inter ${index % 2 == 0 ? "lg:top-0" : "lg:bottom-0"
+          } left-1/2 lg:-translate-x-1/2 z-1 text-center`}
       >
         {text}
       </h2>
       <div
-        className={`absolute ${
-          index % 2 == 0 ? "top-1/12" : "bottom-1/12"
-        } left-1/2 -translate-x-1/2 bg-black w-px h-16 z-0 hidden lg:block `}
+        className={`absolute ${index % 2 == 0 ? "top-1/12" : "bottom-1/12"
+          } left-1/2 -translate-x-1/2 bg-black w-px h-16 z-0 hidden lg:block `}
       ></div>
       <ChefronCard icon={icon} />
     </div>

@@ -22,7 +22,7 @@ const WhyChooseUs = () => {
       ),
       title: "10+ Projects Done",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+        "We’ve been there, built that — over 10 times. Experience that codes confidence into every line.",
     },
     {
       icon: (
@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
       ),
       title: "AI Powered",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+        "We don’t just code — we think. AI in our stack means smarter, sharper solutions.",
     },
     {
       icon: (
@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
       ),
       title: "Cost-Effective",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+        "Big tech dreams? Small budget? Perfect. We deliver premium without the premium price tag.",
     },
     {
       icon: (
@@ -86,14 +86,14 @@ const WhyChooseUs = () => {
       ),
       title: "Fast Delivery",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+        "Deadline? What deadline? We’re done before your coffee cools. Speed without the stress.",
     },
   ];
 
   return (
     <section className="w-full bg-green-50 py-12 border-t border-b border-green-100">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-blue-600 text-center mb-10">
+        <h2 className="text-3xl font-bold text-blue-600 text-center mb-10 font-neue">
           Why Choose Us?
         </h2>
 
@@ -104,8 +104,8 @@ const WhyChooseUs = () => {
                 {benefit.icon}
               </div>
               <div>
-                <h3 className="font-semibold text-blue-800">{benefit.title}</h3>
-                <p className="text-xs text-gray-500 mt-1">
+                <h3 className="font-semibold text-blue-800 font-agrandir-heavy">{benefit.title}</h3>
+                <p className="text-xs text-gray-500 mt-1 font-agrandir">
                   {benefit.description}
                 </p>
               </div>

@@ -40,7 +40,7 @@ export const Faq = () => {
   ];
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
-      <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">
+      <h2 className="text-2xl font-bold text-center text-blue-600 mb-6 font-neue">
         Frequently Asked Questions
       </h2>
 
@@ -51,7 +51,7 @@ export const Faq = () => {
             className="group border border-gray-200 rounded-lg mb-2 transition-all duration-300 ease-in-out hover:bg-gray-50"
           >
             <summary className="flex items-center justify-between cursor-pointer p-4 bg-gradient-to-r from-green-50 to-yellow-100 transition-all duration-300 ease-in-out hover:from-green-100 hover:to-yellow-200">
-              <span className="text-sm font-medium text-green-800 transition-colors duration-300 group-hover:text-green-900">
+              <span className="text-sm font-medium text-green-800 transition-colors duration-300 group-hover:text-green-900 font-ibm">
                 {item.question}
               </span>
               <span className="text-green-600 transform transition-transform duration-300 ease-in-out group-open:rotate-180">

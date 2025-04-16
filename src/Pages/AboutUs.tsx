@@ -60,7 +60,7 @@ const AboutUsCard = () => {
   return (
     <div className="bg-gradient-to-b from-white to-blue-100 py-4 px-6 md:px-20">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-teal-600 mb-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-teal-600 mb-6 text-center font-neue">
           About Us.
         </h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
@@ -69,7 +69,7 @@ const AboutUsCard = () => {
             alt="Team collaboration"
             className="w-56 h-56 object-cover rounded-lg"
           />
-          <div className="text-gray-700 text-lg leading-relaxed">
+          <div className="text-gray-700 text-lg leading-relaxed font-agrandir">
             <p>
               We are a company founded by 10x engineers from top tech firms like
               Google, Meta, LinkedIn, and Microsoft. With deep technical

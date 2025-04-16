@@ -39,7 +39,7 @@ const ServicesSection = () => {
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           {/* Heading section */}
           <div className="mb-12 grid grid-cols-1 md:grid-cols-5  items-center">
-            <h2 className="text-5xl col-span-3 md:text-6xl font-bold text-blue-600 mb-2">
+            <h2 className="text-5xl col-span-3 md:text-6xl font-bold text-blue-600 mb-2 font-neue">
               Software That <span className="text-teal-500">Fits,</span>
               <br />
               Made Just For <span className="text-teal-500">You.</span>
@@ -59,8 +59,8 @@ const ServicesSection = () => {
       </section>
       <section className="py-16 relative overflow-hidden">
         <WhyChooseUs />
-        <ProcessWeFollow />
         <PastProjects />
+        <ProcessWeFollow />
         <TechStackPage />
         <Contactus />
         <Faq />
@@ -74,43 +74,43 @@ export const ServiceCardContainer = () => {
     {
       title: "Web Development",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit quaerat",
+        "Sites so smooth, even your grandma will scroll. We build fast, pretty, pixel-perfect magic.",
       iconPlaceholder: "</>",
     },
     {
       title: "App Development",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit quaerat",
+        "From ‘What if…’ to ‘Download now!’ — we turn ideas into addictive, tappable realities.",
       iconPlaceholder: "<📱>",
     },
     {
       title: "Blockchain Dev",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit quaerat",
+        "Not just crypto talk. We build chains that actually do things. Decentralized? Yes. Confusing? Never.",
       iconPlaceholder: "⛓️",
     },
     {
       title: "Code Outsource",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit quaerat",
+        "Outsource to us — your code gets done, your team gets sleep, your boss gets wowed.",
       iconPlaceholder: "⚙️",
     },
     {
       title: "Backend Dev",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit quaerat",
+        "Our backend devs are like ninjas — silent, efficient, and always saving your app’s life.",
       iconPlaceholder: "{ }",
     },
     {
       title: "AI Integration",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit quaerat",
+        "Slap some brains on your business — we bolt on AI like it’s Iron Man tech. ",
       iconPlaceholder: "🤖",
     },
   ];
   return (
-    <div className="bg-white/80 bg-opacity-70 backdrop-blur-sm rounded-3xl p-8 border border-gray-100 shadow-sm">
-      <h3 className="text-2xl font-semibold text-blue-700 text-center mb-8">
+    <div>
+      <h3 className="text-2xl font-semibold text-blue-700 text-center mb-8 font-neue">
         Services That We Offer
       </h3>
 

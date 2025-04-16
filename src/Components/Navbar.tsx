@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useNavigateWithScroll from "../CustomHooks/customHooks";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,21 +30,20 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-28 font-agrandir">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              to={link.href}
               onClick={() => {
                 navigateWithScroll(link.href);
                 setActiveTab(link.href);
               }}
-              className={`${
-                activeTab === link.href ? "text-green-500" : "text-gray-600"
-              } hover:text-gray-900`}
+              className={`${activeTab === link.href ? "text-green-500" : "text-gray-600"
+                } hover:text-gray-900`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -84,16 +84,15 @@ const Header = () => {
           <div className="absolute top-16 left-0 right-0 bg-white/80 shadow-md py-2 px-4 md:hidden z-50">
             <div className="flex flex-col space-y-3">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setActiveTab(link.href)}
-                  className={`${
-                    activeTab === link.href ? "text-green-500" : "text-gray-600"
-                  } hover:text-gray-900 py-2`}
+                  className={`${activeTab === link.href ? "text-green-500" : "text-gray-600"
+                    } hover:text-gray-900 py-2`}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

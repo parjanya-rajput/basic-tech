@@ -52,7 +52,7 @@ const TechStackPage = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-10">
         {/* Tech Stack Section */}
         <div className="bg-white/50 rounded-lg shadow-md p-8 mb-10">
-          <h2 className="text-2xl font-bold text-center text-blue-600 mb-8">
+          <h2 className="text-2xl font-bold text-center text-blue-600 mb-8 font-neue">
             Techstack
           </h2>
 

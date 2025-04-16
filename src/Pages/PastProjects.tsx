@@ -8,36 +8,37 @@ import { Contactus } from '../Components/Contactus';
 import { Faq } from '../Components/faq';
 import OtherProjects from '../Components/OtherProjects';
 import { useLocation } from 'react-router-dom';
+import { projects } from '../Constants/ProjectsData';
 
-const defaultProjectData =     {
-  "logo": "https://picsum.photos/150/40?random=1",
-  "projectName": "UrbanMatch - The Journey of Love",
-  "subtitle": "Where Love Meets Marriage",
-  "clientInfo": [
-    { "label": "Client", "value": "UrbanMatch Inc." },
-    { "label": "Vertical", "value": "Social Networking" },
-    { "label": "Product", "value": "Matchmaking App" },
-    { "label": "Industry", "value": "Community & Relationships" },
-    { "label": "Company size", "value": "51-200 employees" }
-  ],
-  "businessRequirement": "Create a modern matchmaking platform with AI-based compatibility scoring.",
-  "features": [
-    "AI-powered matchmaking",
-    "Secure and private messaging",
-    "Advanced profile customization"
-  ],
-  "featureImage": "https://picsum.photos/300/200?random=6",
-  "challenge": "Balancing user privacy with data-driven matchmaking analytics.",
-  "design": "A sleek, intuitive interface with personalized recommendations.",
-  "designImage": "https://picsum.photos/100/100?random=6",
-  "solution": "Developed a scalable platform with real-time chat and AI-driven matchmaking.",
-  "solutionImage": "https://picsum.photos/100/100?random=6",
-  "solutionPoints": [
-    "Integrated AI compatibility scoring",
-    "Ensured GDPR-compliant data security",
-    "Optimized user engagement with personalized suggestions"
-  ]
-}
+// const defaultProjectData = {
+//   "logo": "https://picsum.photos/150/40?random=1",
+//   "projectName": "UrbanMatch - The Journey of Love",
+//   "subtitle": "Where Love Meets Marriage",
+//   "clientInfo": [
+//     { "label": "Client", "value": "UrbanMatch Inc." },
+//     { "label": "Vertical", "value": "Social Networking" },
+//     { "label": "Product", "value": "Matchmaking App" },
+//     { "label": "Industry", "value": "Community & Relationships" },
+//     { "label": "Company size", "value": "51-200 employees" }
+//   ],
+//   "businessRequirement": "Create a modern matchmaking platform with AI-based compatibility scoring.",
+//   "features": [
+//     "AI-powered matchmaking",
+//     "Secure and private messaging",
+//     "Advanced profile customization"
+//   ],
+//   "featureImage": "https://picsum.photos/300/200?random=6",
+//   "challenge": "Balancing user privacy with data-driven matchmaking analytics.",
+//   "design": "A sleek, intuitive interface with personalized recommendations.",
+//   "designImage": "https://picsum.photos/100/100?random=6",
+//   "solution": "Developed a scalable platform with real-time chat and AI-driven matchmaking.",
+//   "solutionImage": "https://picsum.photos/100/100?random=6",
+//   "solutionPoints": [
+//     "Integrated AI compatibility scoring",
+//     "Ensured GDPR-compliant data security",
+//     "Optimized user engagement with personalized suggestions"
+//   ]
+// }
 // Glass Effect Style
 export const glassEffect = "backdrop-blur-lg bg-white/50 border border-white/30 shadow-xl rounded-lg";
 
@@ -47,8 +48,8 @@ export const HeaderSection = ({ logo, projectName, subtitle }: { logo: string; p
     <div className="flex justify-center mb-6">
       <img src={logo} alt="Company Logo" className="h-10" />
     </div>
-    <h1 className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">{projectName}</h1>
-    <h2 className="text-2xl text-cyan-500 font-medium">{subtitle}</h2>
+    <h1 className="text-2xl md:text-3xl font-bold text-blue-600 mb-2 font-neue">{projectName}</h1>
+    <h2 className="text-2xl text-cyan-500 font-medium font-neue">{subtitle}</h2>
   </div>
 );
 
@@ -145,13 +146,13 @@ export const SolutionSection = ({ solution, solutionPoints }: { solution: string
 
 // Main Component
 const ProjectCaseStudy = () => {
-    const location = useLocation();
-    const Projdata = location.state;
-    const data=Projdata?.project ?? defaultProjectData;
-    console.log("Project Data:", data);
-    return(
-  <div className="relative  min-h-screen">
-          <div
+  const location = useLocation();
+  const Projdata = location.state;
+  const data = Projdata?.project ?? projects[0];
+  console.log("Project Data:", data);
+  return (
+    <div className="relative  min-h-screen">
+      <div
         className="absolute top-1/6 rounded-full blur-3xl inset-0 h-100 w-100 bg-gradient-to-br from-blue-50 via-purple-50 to-blue-100 opacity-50 z-0"
         style={{
           background:
@@ -186,22 +187,22 @@ const ProjectCaseStudy = () => {
             "radial-gradient(circle at top right, blue, rgba(240, 249, 255, 0.4))",
         }}
       ></div>
-    <div className="max-w-6xl mx-auto p-4 md:p-6">
-      <HeaderSection logo={data?.logo} projectName={data.projectName} subtitle={data.subtitle} />
-      <ClientInfoSection clientInfo={data.clientInfo} />
-      <BusinessRequirementSection businessRequirement={data.businessRequirement} />
-      <FeaturesSection features={data.features} featureImage={data.featureImage} />
-      <ChallengeSection challenge={data.challenge} />
-      <DesignSection design={data.design} />
-      <SolutionSection solution={data.solution} solutionPoints={data.solutionPoints} />
-      <TechStackPage />
-      <ProcessWeFollow/>
-        <OtherProjects/>
-      <Contactus/>
-      <Faq/>        
+      <div className="max-w-6xl mx-auto p-4 md:p-6">
+        <HeaderSection logo={data?.logo} projectName={data.projectName} subtitle={data.subtitle} />
+        <ClientInfoSection clientInfo={data.clientInfo} />
+        <BusinessRequirementSection businessRequirement={data.businessRequirement} />
+        <FeaturesSection features={data.features} featureImage={data.featureImage} />
+        <ChallengeSection challenge={data.challenge} />
+        <DesignSection design={data.design} />
+        <SolutionSection solution={data.solution} solutionPoints={data.solutionPoints} />
+        <TechStackPage />
+        <ProcessWeFollow />
+        <OtherProjects />
+        <Contactus />
+        <Faq />
+      </div>
     </div>
-  </div>
-)
+  )
 }
 
 export default ProjectCaseStudy;
