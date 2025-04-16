@@ -1,5 +1,6 @@
 import useNavigateWithScroll from "../../CustomHooks/customHooks";
 import { blogs } from "../../Constants/BlogData";
+import { heroSlides } from "../../Constants/BlogData";
 
 
 const BlogCard = ({ blog }) => {
@@ -9,6 +10,11 @@ const BlogCard = ({ blog }) => {
   const truncateText = (text: string, limit: number) => {
     if (text.length <= limit) return text;
     return text.slice(0, limit) + '...';
+  };
+
+  const getFullBlogData = () => {
+    const fullBlog = heroSlides.find(slide => slide.title === title);
+    return fullBlog;
   };
 
   return (
@@ -28,7 +34,10 @@ const BlogCard = ({ blog }) => {
           {truncateText(description, 120)}
         </p>
         <button
-          onClick={() => navigateWithScroll("/blog", { blog: blog })}
+          onClick={() => {
+            const fullBlog = getFullBlogData();
+            navigateWithScroll("/blog", { blog: fullBlog });
+          }}
           className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 w-full font-ibm font-bold"
         >
           Read the Post
