@@ -53,6 +53,32 @@ export const HeaderSection = ({ logo, projectName, subtitle }: { logo: string; p
   </div>
 );
 
+// export const HeaderSection = ({ logo, projectName, subtitle }: { logo: string; projectName: string; subtitle: string }) => (
+//   <div className="relative text-center mb-10 p-8 md:p-12 rounded-2xl overflow-hidden">
+//     {/* Background Image Container */}
+//     <div 
+//       className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+//       style={{ 
+//         backgroundImage: `url(${logo})`,
+//         filter: 'brightness(0.3)' // Darken the background image
+//       }}
+//     />
+
+//     {/* Gradient Overlay */}
+//     <div className="absolute inset-0 bg-gradient-to-br from-blue-100/80 to-white/80 backdrop-blur-sm" />
+
+//     {/* Content */}
+//     <div className="relative z-10">
+//       <h1 className="text-2xl md:text-3xl font-bold text-blue-600 mb-2 font-neue">
+//         {projectName}
+//       </h1>
+//       <h2 className="text-2xl text-cyan-500 font-medium font-neue">
+//         {subtitle}
+//       </h2>
+//     </div>
+//   </div>
+// );
+
 // Client Info Section Component
 export const ClientInfoSection = ({ clientInfo }: { clientInfo: { label: string; value: string }[] }) => (
   <div className={`grid grid-cols-2 md:grid-cols-5 gap-3 mb-10 border-b-2 border-white/60 rounded-lg ${glassEffect}`}>
@@ -204,10 +230,8 @@ const ProjectCaseStudy = () => {
         <DesignSection design={data.design} designImage={data.designImage} />
         <SolutionSection solution={data.solution} solutionPoints={data.solutionPoints} solutionImage={data.solutionImage} />
         <TechStackPage />
-        <ProcessWeFollow />
         <OtherProjects />
         <Contactus />
-        <Faq />
       </div>
     </div>
   )

@@ -12,9 +12,7 @@ const BlogPage = () => {
       <HeroSection />
       <BlogGrid />
       <BlogsSlider />
-      <ProcessWeFollow />
       <Contactus />
-      <Faq />
     </div>
   );
 };

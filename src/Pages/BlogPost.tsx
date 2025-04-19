@@ -11,9 +11,7 @@ const BlogPostPage = () => {
       <BlogContent />
       <BlogGrid />
       <BlogsSlider />
-      <ProcessWeFollow />
       <Contactus />
-      <Faq />
     </>
   );
 };
